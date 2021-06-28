@@ -51,16 +51,18 @@ const Index = () => {
 // ------------------------- 
 
   return (
-    <Flex color={color} flexDirection="column" alignItems='center' h='100vh' maxW='100vw'>
+    <Flex  color={color} flexDirection="column" alignItems='center' minH='100vh' overflow='scroll' maxW='100vw'>
 
 
-      <Heading width='100%' display='flex' alignItems='center' justifyContent='center' bg={title} color='white' as="h2" size="lg" mb={10} textAlign="center" paddingY={5}>
+      <Heading height='60px' width='100%' display='flex' alignItems='center' justifyContent='center' bg={title} color='white' as='h1' size="lg" textAlign="center">
         <FaSun style={iconStyles}/> Weather App
       </Heading>
 
-      {/* ------------ MAIN SECTION ---------------- */}
-      <Flex width='100vw' maxW='400px' overflowX='hidden' flexDirection="column" justifyContent='center' alignItems='center' paddingY={10} pb='80px' pt='180px'>
+
       <Form query={query} isLoaded={isLoaded} setIsLoaded={setIsLoaded} setQuery={setQuery} api={API} fetchData={fetchData}/>
+ 
+      {/* ------------ MAIN SECTION ---------------- */}
+      <Flex width='100vw' maxW='400px' overflowX='hidden' flexDirection="column" justifyContent='center' alignItems='center' pb='90px'>
        {!isLoaded ? null : (
          <>
            {result ? (
@@ -71,7 +73,7 @@ const Index = () => {
            ) : <CircularProgress d='block' mx='auto' isIndeterminate mt='100px' color={colorMode === "dark" ? 'teal.300' : 'pink.500'} />}
          </>
        )}
-      </Flex>
+       </Flex>
       {/* ------------------------------------------ */}
 
 
