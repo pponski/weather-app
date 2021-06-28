@@ -24,7 +24,7 @@ const Current = ({result}) => {
             <Text pl='10px' d='flex' alignItems='flex-start' fontSize='6xl'>{Math.round(result.current.temp_c)} <Text pt={3} fontSize='2xl' fontWeight='bold'>°C</Text></Text>
           </Flex>
 
-          <Flex alignItems='center' textAlign='center' my={5} width='100%' max-width='400px' justifyContent='space-between'>
+          <Flex alignItems='center' textAlign='center' my={5} width='100%' max-width='600px' justifyContent='space-between'>
             <Box textAlign='center'>
               <Box fontSize='16px' mb={1} align='center' color={color}>
                 <BsDroplet />

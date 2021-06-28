@@ -20,7 +20,7 @@ import {
                   <TabPanels>
                     <TabPanel>
                       <Text fontSize='md' fontWeight='bold' mb={3}>{moment(result.forecast.forecastday[0].date).format('LL')}</Text>
-                      <Flex borderRadius='50px' p='10px 0' width='100vw' maxW='500px' overflow='scroll' style={{}}>
+                      <Flex borderRadius='50px' p='10px 0' width='100vw' maxW='400px' overflow='scroll' style={{}}>
                         {result.forecast.forecastday[0].hour.map(hour => (
                           <Box key={hour.time}>
                             <Image width="30px" src={hour.condition.icon} alt={hour.condition.text}/>
@@ -41,7 +41,7 @@ import {
                     </TabPanel>
                     <TabPanel>
                     <Text fontSize='md' fontWeight='bold' mb={3}>{moment(result.forecast.forecastday[1].date).format('LL')}</Text>
-                      <Flex borderRadius='50px' p='10px 0' width='100vw' maxW='500px' overflow='scroll' style={{}}>
+                      <Flex borderRadius='50px' p='10px 0' width='100vw' maxW='400px' overflow='scroll' style={{}}>
                         {result.forecast.forecastday[1].hour.map(hour => (
                           <Box key={hour.time}>
                             <Image width="30px" src={hour.condition.icon} alt={hour.condition.text}/>
@@ -62,7 +62,7 @@ import {
                     </TabPanel>
                     <TabPanel>
                     <Text fontSize='md' fontWeight='bold' mb={3}>{moment(result.forecast.forecastday[2].date).format('LL')}</Text>
-                      <Flex borderRadius='50px' p='10px 0' width='100vw' maxW='500px' overflow='scroll' style={{}}>
+                      <Flex borderRadius='50px' p='10px 0' width='100vw' maxW='400px' overflow='scroll' style={{}}>
                         {result.forecast.forecastday[2].hour.map(hour => (
                           <Box key={hour.time}>
                             <Image width="30px" src={hour.condition.icon} alt={hour.condition.text}/>

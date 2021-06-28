@@ -46,14 +46,14 @@ const Index = () => {
   };
 
   return (
-    <Flex color={color} flexDirection="column" h='100vh'>
+    <Flex color={color} flexDirection="column" h='100vh' maxW='100vw'>
       <Heading display='flex' alignItems='center' justifyContent='center' bg={title} color='white' as="h2" size="lg" mb={10} textAlign="center" paddingY={5}>
         <FaSun style={iconStyles}/> Weather App
       </Heading>
       <Form query={query} isLoaded={isLoaded} setIsLoaded={setIsLoaded} setQuery={setQuery} api={API} fetchData={fetchData}/>
 
       {/* ------------ MAIN SECTION ---------------- */}
-      <Flex flexDirection="column" justifyContent='center' alignItems='center' paddingY={10} pb='80px'>
+      <Flex maxW='100vw' flexDirection="column" justifyContent='center' alignItems='center' paddingY={10} pb='80px'>
        {!isLoaded ? null : (
          <>
            {result ? (
