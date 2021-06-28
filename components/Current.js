@@ -11,7 +11,7 @@ const Current = ({result}) => {
 
 
     return (
-        <Flex mx='auto' maxW='400px' flexDirection='column' alignItems='center'>
+        <Flex mt={5}  mx='auto' maxW='400px' flexDirection='column' alignItems='center'>
 {/* ------- WEATHER HEADER ---------- */}
           <Text color={color} fontSize='2xl' fontWeight='bold'>{result.location.name}</Text>
           <Text mb={3} fontSize='md' fontWeight='light'>{result.location.country}</Text>

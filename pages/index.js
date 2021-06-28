@@ -58,11 +58,9 @@ const Index = () => {
         <FaSun style={iconStyles}/> Weather App
       </Heading>
 
-
-      <Form query={query} isLoaded={isLoaded} setIsLoaded={setIsLoaded} setQuery={setQuery} api={API} fetchData={fetchData}/>
-
       {/* ------------ MAIN SECTION ---------------- */}
-      <Flex width='100vw' maxW='400px' overflowX='hidden' flexDirection="column" justifyContent='center' alignItems='center' paddingY={10} pb='80px'>
+      <Flex width='100vw' maxW='400px' overflowX='hidden' flexDirection="column" justifyContent='center' alignItems='center' paddingY={10} pb='80px' pt='180px'>
+      <Form query={query} isLoaded={isLoaded} setIsLoaded={setIsLoaded} setQuery={setQuery} api={API} fetchData={fetchData}/>
        {!isLoaded ? null : (
          <>
            {result ? (
