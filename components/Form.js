@@ -23,7 +23,7 @@ const Form = ({ query, setQuery, fetchData }) => {
 
     return (
         <FormControl as="form" type="submit" onSubmit={formSubmit} minW={1/2} maxW='400px' mx='auto' display="flex" alignItems="center">
-            <Input _focus={{border: `${border}`}} placeholder="Type destination" onChange={handleInput} value={query} />
+            <Input width='80vw' maxW='400px' _focus={{border: `${border}`}} placeholder="Type destination" onChange={handleInput} value={query} />
             <InputRightElement
                 pointerEvents="none"
                 d="flex"
