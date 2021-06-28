@@ -3,9 +3,6 @@ import { FaSearch } from 'react-icons/fa';
 
 const Form = ({ query, setQuery, fetchData }) => {
 
-    const border = useColorModeValue("2px solid violet","2px solid turquoise")
-
-
     const formSubmit = (e) => {
         e.preventDefault();
         fetchData();
@@ -16,10 +13,14 @@ const Form = ({ query, setQuery, fetchData }) => {
         setQuery(e.target.value)
     }
 
+// -----  STYLES  --------------------
+
+    const border = useColorModeValue("2px solid violet","2px solid turquoise");
 
     const iconStyles = {
         fontSize: 16
     }
+    
 
     return (
         <FormControl width='80vw' as="form" type="submit" onSubmit={formSubmit} maxW='400px' mx='auto' display="flex" alignItems="center">
