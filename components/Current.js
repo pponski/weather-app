@@ -15,7 +15,7 @@ const Current = ({result}) => {
 {/* ------- WEATHER HEADER ---------- */}
           <Text color={color} fontSize='2xl' fontWeight='bold'>{result.location.name}</Text>
           <Text mb={3} fontSize='md' fontWeight='light'>{result.location.country}</Text>
-          <Text fontSize='sm' fontWeight='light' fontStyle='italic'>{result.current.condition.text} - {moment(result.location.localtime).format('dddd, HH:MM')}</Text>
+          <Text fontSize='sm' fontWeight='light' fontStyle='italic'>{result.current.condition.text} - {moment(result.location.localtime).format('dddd, HH:mm')}</Text>
 {/* ------- WEATHER IMAGE CONTAINER ---------- */}
           <Flex width='100vw' maxW='400px' justifyContent='center' mt={3} alignItems='center'>
             <Image d='block' width='100px' src={result.current.condition.icon} alt={result.current.condition.text} />
